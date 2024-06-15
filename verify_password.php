@@ -1,16 +1,16 @@
 <?php
 // Set the correct password
-$correct_password = 'JALEN_BRUNSON@GOAT';
+$correct_password = 'jalen@brunsonGOAT';
 
 // Get the password from the user
 $password = $_POST['password'];
 
 // Verify the password
 if ($password === $correct_password) {
-    // Login successful, redirect to protected page
-    header('Location: protected.php');
-    exit;
+    // Login successful, wait for 1 second and generate iframe
+    sleep(1);
+    echo '<iframe src="protected_page.html" width="100%" height="500"></iframe>';
 } else {
-    echo "Invalid password!";
+    echo "Invalid password! Try Again.";
 }
 ?>
